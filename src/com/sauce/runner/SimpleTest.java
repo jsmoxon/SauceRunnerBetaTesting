@@ -35,7 +35,7 @@ public class SimpleTest {
         DesiredCapabilities capabilities = DesiredCapabilities.firefox();
         capabilities.setCapability("name", "SimpleTest - " + method.getName());
         ctx.driver = new RemoteWebDriver(
-                new URL(TestConfiguration.ON_DEMAND_URL),
+                new URL(TestConfiguration.onDemandUrl),
                 capabilities);
         ctx.driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         ctx.jobId = ((RemoteWebDriver) ctx.driver).getSessionId().toString();
